@@ -1,0 +1,9 @@
+<a class="swiper-slide" data-swiper-slide-index="1" href="{{ txtLink.0['#url'] }}">
+	{% if pcimg is not empty %}
+	  {% for imageItem in pcimg %}
+		<figure>
+			<img src="{{ file_url(imageItem.link) }}" class="img-responsive" />
+		</figure>
+	  {% endfor %}
+	{% endif %}
+</a>

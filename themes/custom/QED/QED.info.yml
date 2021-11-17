@@ -1,0 +1,17 @@
+core: 8.x
+type: theme
+name: 'QED'
+description: 'QED Publication list view.'
+version: 1.x
+
+regions:
+  navigation: 'Navigation'
+  header: 'Top Bar'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  footer: 'Footer'
+  hidden: 'Hidden'
+
+libraries:
+  - QED/global-css
+  - QED/global-js

@@ -1,0 +1,17 @@
+{% if textPosition is not empty %}
+  {% if textPosition == 'left' %}
+    {% set align = '' %}
+  {% elseif textPosition == 'right' %}
+  	{% set align = 'p-home__pickup-row--text-right' %}
+  {% endif %}
+{% endif %}
+<div class="p-home__pickup-row {{ align }}">
+	<div class="l-inner">
+		<div class="p-home__pickup-text">
+			{{ pickuptitle }}
+			{{ pickuptxt }}
+			<p><a href="{{ pickupLink.0['#url'] }}" class="p-home__pickup-btn">LEARN MORE</a></p>
+		</div>
+		<div class="p-home__pickup-image" style="background-image: url({{ file_url(pickupimg['#items'][0].entity.uri.value) }});"></div>
+	</div>
+</div>

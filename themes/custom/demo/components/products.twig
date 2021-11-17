@@ -1,0 +1,62 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 product-image">
+         {% if prodImg is not empty %}
+          {% for imageItem in prodImg %}
+              <img src="{{ file_url(imageItem.link) }}" alt="{{ imageItem.alt }}" class="img-responsive" />
+          {% endfor %}
+        {% endif %} 
+      </div>
+      <div class="col-sm-7 product-detail">
+       {% if (largeCategory is not empty) and (middleCategory is not empty) %}
+          <p class="p-products__product-category">{{ largeCategory }} : {{ middleCategory }}</p>
+        {% endif %}
+        {% if (prodModelNo is not empty) and (manufacturerName is not empty) %}
+          <p class="p-products__product-ser">
+            {{ prodModelNo }}
+            <span class="p-products__product-manufacturer">{{ manufacturerName }}</span>
+          </p>
+        {% endif %}
+        {% if prodName is not empty %}
+          <h1 class="p-products__product-name">{{ prodName }}</h1>
+        {% endif %}
+        
+
+        {% if discontChk == '0' %}
+          {% if briefDescription is not empty %}
+            <p class="p-products__product-lead">{{ briefDescription }}</p>
+          {% endif %}
+          {% if prodFeatures is not empty %}
+            {{ prodFeatures }}
+          {% endif %} 
+           <ul class="p-products__product-feature" style="list-style-type: none; padding: 0;">
+              {% if prodFeatureImg is not empty %}
+                {% for groupImgs in prodFeatureImg.0.link %}
+                  <li style="display: inline-block; margin: 0 10px;">
+                    <img src="{{ file_url(groupImgs.entity.uri.value) }}" alt="{{ groupImgs.alt }}" class="img-responsive" style="width: 60px;" />
+                  </li>
+                {% endfor %}
+              {% endif %}
+          </ul>
+          <ul class="p-products__product-downloads" style="padding: 0;">
+            {% if specSheet is not empty %}
+              <li style="display: inline-block; margin: 10px; width: 46%;"><a href="{{ file_url( specSheet ) }}" download="" class="p-products__download-btn">{{ 'SPEC SHEET'|t }}</a></li>
+            {% endif %}
+            {% if aespecSheet is not empty %}
+              <li style="display: inline-block; margin: 10px; width: 46%;"><a href="{{ file_url( aespecSheet ) }}" download="" class="p-products__product-featureownload-btnroducts__product-downloadsnload-btn">{{ 'A&amp;E SPEC SHEET'|t }}</a></li>
+            {% endif %}
+            {% if Broucher is not empty %}
+              <li style="display: inline-block; margin: 10px; width: 46%;"><a href="{{ file_url( Broucher ) }}" download="" class="p-products__download-btnroducts__product-downloadsnload-btnload-btn">{{ 'BROCHURE'|t }}</a></li>
+            {% endif %}
+            {% if cadDrawing is not empty %}
+              <li style="display: inline-block; margin: 10px; width: 46%;"><a href="{{ file_url( cadDrawing ) }}" download="" class="p-products__download-btn">{{ 'CAD DRAWING'|t }}</a></li>
+            {% endif %}
+          </ul>
+        {% else %}
+          <p class="p-products__product-discontinued-label">DISCONTINUED PRODUCT</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

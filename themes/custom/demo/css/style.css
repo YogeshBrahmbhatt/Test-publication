@@ -1,0 +1,150 @@
+body {
+	background-color: #e3f3f2;
+	font-size: 16px;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	font-family: swiper-icons;
+    font-weight: 400;
+    font-style: normal;
+}
+.p-home__pickup-row {
+    height: 495px;
+    color: #fff;
+    background-color: #6464e6;
+    position: relative;
+    z-index: 0;
+}
+.p-home__pickup-row .l-inner, 
+.p-home__pickup-row .c-breadcrumb, 
+.p-home__pickup-row .eu-cookie-compliance-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.p-home__pickup-row--text-right {
+    background-color: gray;
+}
+.p-home__pickup-row--text-right .l-inner, 
+.p-home__pickup-row--text-right .c-breadcrumb, 
+.p-home__pickup-row--text-right .eu-cookie-compliance-content {
+    flex-direction: row-reverse;
+}
+.p-home__pickup-row--text-right .p-home__pickup-image {
+    background-position: left bottom;
+    left: 0;
+    right: auto;
+}
+.p-home__pickup-row--text-right .p-home__pickup-btn.is-hover, 
+.p-home__pickup-row--text-right .p-home__pickup-btn:hover {
+    color: gray;
+}
+@media screen and (max-width: 800px) {
+    .p-home__pickup-row {
+        height: auto;
+        padding-top: 250px;
+    }
+    .p-home__pickup-row .l-inner, 
+    .p-home__pickup-row .c-breadcrumb, .fw.p-home .p-home__pickup-row .eu-cookie-compliance-content {
+        display: block;
+    }
+
+}
+.p-home__pickup-text {
+    width: 420px;
+}
+.p-home__pickup-text h2 {
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1em;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 800px) {
+    .p-home__pickup-text {
+        width: auto;
+        padding: 50px 0;
+    }
+    .p-home__pickup-text h2 {
+        font-size: 25px;
+    }
+}
+.p-home__pickup-image {
+    background-position: center bottom;
+    background-size: cover;
+    position: absolute;
+    width: calc(50% + 120px);
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+@media screen and (max-width: 1235px) {
+    .p-home__pickup-image {
+    width: 50%}
+}
+@media screen and (max-width: 990px) {
+    .p-home__pickup-image {
+        width: calc(50% - 100px);
+    }
+}
+@media screen and (max-width: 800px) {
+    .p-home__pickup-image {
+    width: 100%}
+}
+@media screen and (max-width: 800px) {
+    .p-home__pickup-image {
+        height: 250px;
+    }
+}
+.p-home__pickup-btn {
+    margin-top: 45px;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: color .4s, border-color .4s, background-color .4s;
+    background-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+}
+@media screen and (max-width: 800px) {
+    .p-home__pickup-btn {
+        margin-top: 25px;
+        display: block;
+        max-width: none;
+    }
+}
+.p-home__carousel {
+    padding: 50px 0;
+}
+.l-inner {
+    display: block;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.c-rich-swiper.swiper-container.swiper-container-initialized {
+    opacity: 1;
+}
+.c-rich-swiper.swiper-container {
+    opacity: 0;
+    transition: opacity .1s;
+}
+.c-rich-swiper {
+    margin-bottom: 20px;
+}
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}

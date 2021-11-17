@@ -1,0 +1,54 @@
+{
+  "name": "qed",
+  "version": "1.0.0",
+  "description": "qed publication list view",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yogesh",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "qed": "^0.2.4"
+  },
+  "dependencies": {
+    "ansi-colors": "^1.1.0",
+    "ansi-regex": "^5.0.1",
+    "ansi-styles": "^4.3.0",
+    "ansi-wrap": "^0.1.0",
+    "arr-diff": "^4.0.0",
+    "arr-union": "^3.1.0",
+    "assign-symbols": "^1.0.0",
+    "bluebird": "^0.11.6",
+    "chalk": "^4.1.2",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "dotmap": "^0.1.0",
+    "extend-shallow": "^3.0.2",
+    "fninfo": "^1.0.3",
+    "gulp-livereload": "^4.0.2",
+    "has-flag": "^4.0.0",
+    "is-extendable": "^1.0.1",
+    "is-plain-object": "^2.0.4",
+    "isobject": "^3.0.1",
+    "lodash": "^4.17.21",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^2.0.0",
+    "source-map": "^0.5.7",
+    "strip-ansi": "^6.0.1",
+    "supports-color": "^7.2.0",
+    "transfob": "^1.0.0",
+    "vinyl-sourcemaps-apply": "^0.2.1"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
